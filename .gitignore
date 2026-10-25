@@ -1,0 +1,14 @@
+# PROS build outputs
+bin/
+deploy/
+firmware/
+*.bin
+
+# Toolchain / editor
+.vscode/
+.compile/
+.name
+
+# OS
+.DS_Store
+Thumbs.db

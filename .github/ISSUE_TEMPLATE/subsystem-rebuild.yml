@@ -1,0 +1,31 @@
+name: Subsystem rebuild
+description: Open one of these before building or rebuilding a subsystem (hardware or code)
+title: "[<subsystem>] "
+labels: ["rebuild"]
+body:
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: One person's name. A subsystem without an owner does not get built.
+    validations:
+      required: true
+  - type: textarea
+    id: spec
+    attributes:
+      label: Specification
+      description: Motors, gears, sensors, wattage. New port assignments also go into docs/port-map.md in the PR that closes this issue.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done criteria
+      description: How we know this works, e.g. "passes tuning-protocol tier 2", "driver can score 3 pieces in a row".
+    validations:
+      required: true
+  - type: textarea
+    id: salvage
+    attributes:
+      label: Salvage from archive/last-build-88w
+      description: What logic/pattern/screwup from the last build this build reuses or avoids.
